@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fatema Kazi — Student Portfolio showcasing projects, certificates, and achievements." />
+  <meta name="author" content="Fatema Kazi" />
+  <title>Fatema Kazi | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    #lightbox { display:none; position:fixed; inset:0; z-index:2000; background:rgba(0,0,0,0.88); align-items:center; justify-content:center; backdrop-filter:blur(8px); }
+    #lightbox.open { display:flex; }
+    .lb-box { background:var(--card); border:1px solid var(--border); border-radius:20px; padding:2rem; max-width:500px; width:90%; text-align:center; position:relative; }
+    .lb-emoji { font-size:6rem; display:block; margin-bottom:1rem; }
+    #lbCaption { color:var(--muted); font-size:0.9rem; margin-top:0.5rem; }
+    #lbClose { position:absolute; top:1rem; right:1rem; background:var(--surface); border:1px solid var(--border); color:var(--text); width:32px; height:32px; border-radius:50%; cursor:pointer; font-size:1rem; display:flex; align-items:center; justify-content:center; }
+    #lbClose:hover { border-color:var(--accent); color:var(--accent); }
+    #backTop { position:fixed; bottom:2rem; right:2rem; z-index:500; width:44px; height:44px; border-radius:50%; background:var(--accent); color:#0a0a0f; border:none; cursor:pointer; font-size:1.2rem; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity 0.3s, transform 0.2s; box-shadow:0 4px 20px rgba(232,201,125,0.35); }
+    #backTop:hover { transform:translateY(-3px); }
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-logo">Fatema.dev</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+    <li><a href="#certificates">Certificates</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button id="darkToggle" title="Toggle theme">🌙</button>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div id="home" style="min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;padding:80px 2rem 0;overflow:hidden;">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-tag">✦ <span id="typedText">Computer Science Student</span></div>
+      <h1 class="hero-name">Fatema<br /><span>Kazi</span></h1>
+      <p class="hero-intro">A passionate student developer building impactful digital experiences with AI, design thinking, and creative problem-solving. Open to opportunities and collaborations.</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">View Projects →</a>
+        <a href="#contact" class="btn-outline">Get in Touch</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">3+</div><div class="stat-lbl">Projects</div></div>
+        <div class="stat"><div class="stat-num">5+</div><div class="stat-lbl">Certificates</div></div>
+        <div class="stat"><div class="stat-num">2+</div><div class="stat-lbl">Awards</div></div>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <div class="hero-avatar">
+        <!-- Replace with: <img src="assets/images/profile.jpg" alt="Fatema Kazi" /> -->
+        🎓
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="reveal">
+    <div class="section-label">About Me</div>
+    <h2 class="section-title">Who I Am &<br />What I Do</h2>
+    <p class="section-sub">A curious mind driven by technology, creativity, and a desire to build solutions that matter.</p>
+  </div>
+  <div class="about-grid reveal">
+    <div>
+      <div class="about-card" style="margin-bottom:1.2rem;">
+        <h4>🎓 Education</h4>
+        <ul>
+          <li>B.Tech / BCA – Computer Science (Pursuing)</li>
+          <li>HSC – Science Stream — 85%</li>
+          <li>SSC — 92%</li>
+        </ul>
+      </div>
+      <div class="about-card">
+        <h4>🎯 Goals</h4>
+        <p>To become a full-stack developer and AI engineer who bridges technology with real-world impact, contributing to products used by millions.</p>
+      </div>
+    </div>
+    <div class="about-cards-col">
+      <div class="about-card">
+        <h4>💡 Interests</h4>
+        <ul>
+          <li>Artificial Intelligence & Machine Learning</li>
+          <li>Web Development (Frontend & Backend)</li>
+          <li>Design Thinking & UX</li>
+          <li>Open Source Contribution</li>
+        </ul>
+      </div>
+      <div class="about-card">
+        <h4>💪 Strengths</h4>
+        <ul>
+          <li>Fast Learner & Adaptable</li>
+          <li>Creative Problem Solver</li>
+          <li>Team Collaborator</li>
+          <li>Attention to Detail</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:3.5rem;" class="reveal">
+    <div class="section-label">Skills</div>
+    <h3 class="section-title" style="font-size:1.8rem;">Technical Proficiency</h3>
+    <div class="skills-grid" style="margin-top:2rem;">
+      <div>
+        <div class="skill-item"><div class="skill-header"><span class="skill-name">HTML & CSS</span><span class="skill-pct">90%</span></div><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div></div>
+        <div class="skill-item"><div class="skill-header"><span class="skill-name">JavaScript</span><span class="skill-pct">75%</span></div><div class="skill-bar"><div class="skill-fill" data-w="75"></div></div></div>
+        <div class="skill-item"><div class="skill-header"><span class="skill-name">Python</span><span class="skill-pct">70%</span></div><div class="skill-bar"><div class="skill-fill" data-w="70"></div></div></div>
+      </div>
+      <div>
+        <div class="skill-item"><div class="skill-header"><span class="skill-name">AI/ML Basics</span><span class="skill-pct">65%</span></div><div class="skill-bar"><div class="skill-fill" data-w="65"></div></div></div>
+        <div class="skill-item"><div class="skill-header"><span class="skill-name">Design Thinking</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" data-w="80"></div></div></div>
+        <div class="skill-item"><div class="skill-header"><span class="skill-name">Git & GitHub</span><span class="skill-pct">72%</span></div><div class="skill-bar"><div class="skill-fill" data-w="72"></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="reveal">
+    <div class="section-label">Achievements</div>
+    <h2 class="section-title">Awards &<br />Milestones</h2>
+    <p class="section-sub">Recognition earned through hard work, innovation, and participation in prestigious programs.</p>
+  </div>
+  <div class="ach-grid reveal">
+    <div class="ach-card"><div class="ach-year">2024</div><div class="ach-icon">🤖</div><div class="ach-type">AI Project</div><div class="ach-title">Ai4A Project</div><div class="ach-desc">Successfully completed the Artificial Intelligence for All (Ai4A) project, building a practical AI solution addressing a real-world problem with ML models.</div></div>
+    <div class="ach-card"><div class="ach-year">2024</div><div class="ach-icon">💡</div><div class="ach-type">Design Thinking</div><div class="ach-title">Design Thinking Project</div><div class="ach-desc">Applied Stanford's Design Thinking methodology to identify user pain points and prototype innovative solutions through empathy, ideation, and testing.</div></div>
+    <div class="ach-card"><div class="ach-year">2024</div><div class="ach-icon">🏆</div><div class="ach-type">ACE Program</div><div class="ach-title">ACE Project</div><div class="ach-desc">Completed the ACE (Academic & Co-curricular Excellence) project with distinction, demonstrating strong academics combined with extracurricular achievement.</div></div>
+    <div class="ach-card"><div class="ach-year">2023</div><div class="ach-icon">🥇</div><div class="ach-type">Award</div><div class="ach-title">Best Student Award</div><div class="ach-desc">Recognized as Best Student of the Year for outstanding academic performance, leadership, and contribution to the institution.</div></div>
+    <div class="ach-card"><div class="ach-year">2023</div><div class="ach-icon">💻</div><div class="ach-type">Event</div><div class="ach-title">Hackathon Participation</div><div class="ach-desc">Participated in a 24-hour hackathon, collaborating with a team to build a working prototype solving a social challenge.</div></div>
+    <div class="ach-card"><div class="ach-year">2023</div><div class="ach-icon">🌟</div><div class="ach-type">Event</div><div class="ach-title">Tech Fest Winner</div><div class="ach-desc">Won first place in the college tech fest coding competition, demonstrating problem-solving skills under time pressure.</div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CERTIFICATES -->
+<section id="certificates">
+  <div class="reveal">
+    <div class="section-label">Certificates</div>
+    <h2 class="section-title">Verified<br />Credentials</h2>
+    <p class="section-sub">Industry-recognized certifications from leading platforms demonstrating continuous upskilling.</p>
+  </div>
+  <div class="cert-grid reveal">
+    <div class="cert-card"><div class="cert-logo">📘</div><div class="cert-provider">Coursera</div><div class="cert-name">Python for Everybody Specialization</div><div class="cert-year">2024 · University of Michigan</div><span class="cert-badge">✓ Verified</span></div>
+    <div class="cert-card"><div class="cert-logo">🌐</div><div class="cert-provider">Netcad</div><div class="cert-name">Networking & Cyber Security Fundamentals</div><div class="cert-year">2024 · Netcad Academy</div><span class="cert-badge">✓ Verified</span></div>
+    <div class="cert-card"><div class="cert-logo">🇮🇳</div><div class="cert-provider">Yuva AI</div><div class="cert-name">Artificial Intelligence for Youth</div><div class="cert-year">2024 · Yuva AI Initiative</div><span class="cert-badge">✓ Verified</span></div>
+    <div class="cert-card"><div class="cert-logo">🤖</div><div class="cert-provider">Coursera</div><div class="cert-name">Machine Learning Foundations</div><div class="cert-year">2023 · DeepLearning.AI</div><span class="cert-badge">✓ Verified</span></div>
+    <div class="cert-card"><div class="cert-logo">🎨</div><div class="cert-provider">Coursera</div><div class="cert-name">Introduction to Web Design</div><div class="cert-year">2023 · UC Davis</div><span class="cert-badge">✓ Verified</span></div>
+    <div class="cert-card"><div class="cert-logo">⚙️</div><div class="cert-provider">Netcad</div><div class="cert-name">IoT & Embedded Systems Basics</div><div class="cert-year">2023 · Netcad Academy</div><span class="cert-badge">✓ Verified</span></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="reveal">
+    <div class="section-label">Projects</div>
+    <h2 class="section-title">Things I've<br />Built</h2>
+    <p class="section-sub">Hands-on projects showcasing practical skills in AI, web development, and user-centered design.</p>
+  </div>
+  <div class="proj-grid reveal">
+    <div class="proj-card"><div class="proj-img" style="background:linear-gradient(135deg,#1a1a30,#2a1a30);">🤖</div><div class="proj-body"><div class="proj-tag">AI · Ai4A</div><div class="proj-title">Smart Crop Disease Detector</div><div class="proj-desc">An AI-powered web app that analyzes leaf images to detect crop diseases using a CNN model trained on 38 plant disease classes.</div><div class="proj-links"><a href="#" class="proj-link">⬡ Live Demo</a><a href="#" class="proj-link">⌥ GitHub</a></div></div></div>
+    <div class="proj-card"><div class="proj-img" style="background:linear-gradient(135deg,#1a2a1a,#1a301a);">💡</div><div class="proj-body"><div class="proj-tag">UX · Design Thinking</div><div class="proj-title">Campus Food Waste Reducer</div><div class="proj-desc">A Design Thinking project addressing food waste in college canteens — built a prototype app for pre-ordering meals.</div><div class="proj-links"><a href="#" class="proj-link">⬡ Prototype</a><a href="#" class="proj-link">⌥ GitHub</a></div></div></div>
+    <div class="proj-card"><div class="proj-img" style="background:linear-gradient(135deg,#2a1a1a,#301a20);">🏫</div><div class="proj-body"><div class="proj-tag">Web · ACE Project</div><div class="proj-title">Student Achievement Portal</div><div class="proj-desc">A full-stack web portal enabling students to log achievements, upload certificates, and generate shareable portfolios.</div><div class="proj-links"><a href="#" class="proj-link">⬡ Live Site</a><a href="#" class="proj-link">⌥ GitHub</a></div></div></div>
+    <div class="proj-card"><div class="proj-img" style="background:linear-gradient(135deg,#1a201a,#1a2a30);">📊</div><div class="proj-body"><div class="proj-tag">Python · Data</div><div class="proj-title">COVID-19 Data Visualizer</div><div class="proj-desc">An interactive dashboard visualizing COVID-19 trends across India using Pandas, Matplotlib, and Plotly.</div><div class="proj-links"><a href="#" class="proj-link">⬡ View Project</a><a href="#" class="proj-link">⌥ GitHub</a></div></div></div>
+    <div class="proj-card"><div class="proj-img" style="background:linear-gradient(135deg,#201a2a,#2a1a30);">🛍️</div><div class="proj-body"><div class="proj-tag">Web · Frontend</div><div class="proj-title">E-Commerce UI Template</div><div class="proj-desc">A responsive e-commerce site with product listing, cart, and checkout — built with pure HTML, CSS & JS.</div><div class="proj-links"><a href="#" class="proj-link">⬡ Live Demo</a><a href="#" class="proj-link">⌥ GitHub</a></div></div></div>
+    <div class="proj-card"><div class="proj-img" style="background:linear-gradient(135deg,#2a201a,#30251a);">🎮</div><div class="proj-body"><div class="proj-tag">JavaScript · Game</div><div class="proj-title">Quiz Master — JS Game</div><div class="proj-desc">A timed quiz game with 50+ questions, score tracking, leaderboard, and animations — all in vanilla JS.</div><div class="proj-links"><a href="#" class="proj-link">⬡ Play Now</a><a href="#" class="proj-link">⌥ GitHub</a></div></div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="reveal">
+    <div class="section-label">Gallery</div>
+    <h2 class="section-title">Photos &<br />Certificates</h2>
+    <p class="section-sub">A visual archive of achievements, events, and milestones. Click to enlarge.</p>
+  </div>
+  <div class="gallery-grid reveal">
+    <div class="gal-item wide" data-emoji="🎓" style="background:linear-gradient(135deg,#1a1a2a,#2a1a2a);font-size:4rem;">🎓<div class="gal-label">Graduation Day</div></div>
+    <div class="gal-item" data-emoji="🏆" style="background:linear-gradient(135deg,#1a2a1a,#222a1a);">🏆<div class="gal-label">Best Student Award</div></div>
+    <div class="gal-item" data-emoji="📜" style="background:linear-gradient(135deg,#2a1a1a,#2a2a1a);">📜<div class="gal-label">Coursera Certificate</div></div>
+    <div class="gal-item" data-emoji="🤖" style="background:linear-gradient(135deg,#1a2a2a,#1a1a2a);">🤖<div class="gal-label">Ai4A Certificate</div></div>
+    <div class="gal-item" data-emoji="🌐" style="background:linear-gradient(135deg,#2a1a2a,#1a2a2a);">🌐<div class="gal-label">Netcad Certificate</div></div>
+    <div class="gal-item wide" data-emoji="💻" style="background:linear-gradient(135deg,#2a2a1a,#1a2a1a);font-size:4rem;">💻<div class="gal-label">Hackathon Team</div></div>
+    <div class="gal-item" data-emoji="🇮🇳" style="background:linear-gradient(135deg,#1a1a2a,#2a1a1a);">🇮🇳<div class="gal-label">Yuva AI Certificate</div></div>
+    <div class="gal-item" data-emoji="⭐" style="background:linear-gradient(135deg,#1a2a2a,#2a1a2a);">⭐<div class="gal-label">Tech Fest Trophy</div></div>
+    <div class="gal-item" data-emoji="💡" style="background:linear-gradient(135deg,#2a1a2a,#1a1a2a);">💡<div class="gal-label">Design Thinking Workshop</div></div>
+    <div class="gal-item" data-emoji="🎤" style="background:linear-gradient(135deg,#2a2a1a,#1a2a2a);">🎤<div class="gal-label">Seminar Presentation</div></div>
+  </div>
+  <p style="text-align:center;color:var(--muted);font-size:0.85rem;margin-top:1.5rem;font-style:italic;">Replace emoji placeholders with your real images from <code>assets/images/gallery/</code></p>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="reveal">
+    <div class="section-label">Contact</div>
+    <h2 class="section-title">Let's Work<br />Together</h2>
+    <p class="section-sub">Whether it's a project, collaboration, or just a hello — my inbox is always open.</p>
+  </div>
+  <div class="contact-wrap reveal">
+    <div class="contact-info">
+      <a href="mailto:fatema.kazi@email.com" class="contact-item"><div class="contact-icon">✉️</div><div class="contact-detail"><div class="lbl">Email</div><div class="val">fatema.kazi@email.com</div></div></a>
+      <a href="tel:+919876543210" class="contact-item"><div class="contact-icon">📱</div><div class="contact-detail"><div class="lbl">Phone</div><div class="val">+91 98765 43210</div></div></a>
+      <a href="https://linkedin.com/in/fatemakazi" target="_blank" class="contact-item"><div class="contact-icon">💼</div><div class="contact-detail"><div class="lbl">LinkedIn</div><div class="val">linkedin.com/in/fatemakazi</div></div></a>
+      <a href="https://github.com/fatemakazi" target="_blank" class="contact-item"><div class="contact-icon">⌥</div><div class="contact-detail"><div class="lbl">GitHub</div><div class="val">github.com/fatemakazi</div></div></a>
+      <div class="contact-item" style="cursor:default;"><div class="contact-icon">📍</div><div class="contact-detail"><div class="lbl">Location</div><div class="val">Solapur, Maharashtra, India</div></div></div>
+    </div>
+    <form class="contact-form" id="contactForm">
+      <div class="form-group"><label>Your Name</label><input type="text" placeholder="John Doe" required /></div>
+      <div class="form-group"><label>Email Address</label><input type="email" placeholder="john@example.com" required /></div>
+      <div class="form-group"><label>Message</label><textarea placeholder="Tell me about your project or opportunity..." required></textarea></div>
+      <button type="submit" class="btn-primary">Send Message →</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>Designed & built by <span>Fatema Kazi</span> · <span>2024</span></p>
+  <p style="margin-top:0.5rem;font-size:0.78rem;">HTML · CSS · JavaScript · Deployed on GitHub Pages</p>
+</footer>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <div class="lb-box">
+    <button id="lbClose">✕</button>
+    <span class="lb-emoji" id="lbImg">🖼️</span>
+    <p id="lbCaption"></p>
+  </div>
+</div>
+
+<button id="backTop" title="Back to top">↑</button>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
